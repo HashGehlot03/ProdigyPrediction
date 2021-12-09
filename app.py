@@ -101,9 +101,9 @@ if options == 'Model Prediction 🎈':
         if predict:
             pred = model.predict([[department,education,sex,recruitment,training,age,length_of_service,prev_rate,Kpi,Awards,avg_training_score]])
             if pred[0] == 0:
-                st.write('Sorry  you are not promoted, Keep working Hard 😊')
+                st.danger('Sorry  you are not promoted, Keep working Hard 😊')
             elif pred[0] == 1:
-                st.write("Congrats You've got promotion  Party Time 🥳")
+                st.success("Congrats You've got promotion  Party Time 🥳")
 
     
 
