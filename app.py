@@ -44,7 +44,7 @@ if options == 'Home 🏠':
     
     st.title('Sample Dataset')
     st.dataframe(train.head(20))
-    st.download_button(label = '⬇️ Download Dataset',data='ProdigyTrain.csv' ,file_name= 'train_dataset.csv')
+    st.download_button(label = '⬇️ Download Dataset',data=ProdigyTrain.csv ,file_name= 'train_dataset.csv')
     st.markdown("_______________________________________________________________________________________________")
     st.title('Details of Project')
     st.write("This project is a Machine Learning and Data Analysis based. In this, we have the details of the employee like their education, department, score etc. [Dataset](https://www.kaggle.com/c/data-analytics-challenge-prodigy18/data) is derived from the [kaggle](https://www.kaggle.com) competition. The main goal of this project to predict that the employee will get promoted or not.")
@@ -66,7 +66,7 @@ if options == 'Visualize Data 📈':
     col_area = st.selectbox('Columns for plotting area',num_cols)
     st.title('Area Plot')
     st.area_chart(x_train[col_area].head(35),width=80,height = 340)
-    st.title('Bubble Plot')
+    st.title('Bar Plot')
     col_bar = st.selectbox('Columns for plotting bubble',num_cols)
     st.title('Bar Plot')
     st.bar_chart(x_train[col_bar].head(35))
