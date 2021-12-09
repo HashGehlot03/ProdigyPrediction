@@ -44,7 +44,7 @@ if options == 'Home 🏠':
     
     st.title('Sample Dataset')
     st.dataframe(train.head(20))
-    st.download_button(label = '⬇️ Download Dataset',data='ProdigyTrain.csv' ,file_name= 'train_dataset.csv')
+    st.download_button(label = '⬇️ Download Dataset',data=train_d.to_csv() ,file_name= 'train_dataset.csv',mime = 'text/csv')
     st.markdown("_______________________________________________________________________________________________")
     st.title('Details of Project')
     st.write("This project is a Machine Learning and Data Analysis based. In this, we have the details of the employee like their education, department, score etc. [Dataset](https://www.kaggle.com/c/data-analytics-challenge-prodigy18/data) is derived from the [kaggle](https://www.kaggle.com) competition. The main goal of this project to predict that the employee will get promoted or not.")
