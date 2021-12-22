@@ -4,6 +4,10 @@ import numpy as np
 import streamlit as st
 
 st.set_page_config(page_title = 'Promotion Prediction',page_icon='🌀')
+st.markdown(
+           """ <style> .main { background-color : #d6b265; } </style> """,
+           unsafe_allow_html = True
+)
 train_d = pd.read_csv('ProdigyTrain.csv')
 train = train_d.drop(['employee_id','region'],axis = 1)
 x_train = train.drop(['is_promoted'],axis = 1)
